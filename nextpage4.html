@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Solo - Trip Checklist</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    color: #ff4f81;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+}
+
+h2 {
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #ff4f81;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff2e6a;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Solo Trip Checklist ✈</h2>
+
+<select id="destination" onchange="generateChecklist()">
+    <option value="">-- Select Destination Type --</option>
+    <option value="beach">Beach</option>
+    <option value="mountain">Mountain</option>
+    <option value="city">City</option>
+    <option value="international">International Travel</option>
+</select>
+
+<ul id="checklist"></ul>
+
+<button onclick="checkCompletion()">Done Packing</button>
+
+<div id="message"></div>
+
+</div>
+
+<script>
+const items = {
+    beach: ["Sunscreen", "Swimwear", "Sunglasses", "Flip flops", "Beach towel"],
+    mountain: ["Jacket", "Hiking shoes", "Backpack", "Water bottle", "First aid kit"],
+    city: ["Comfortable shoes", "Power bank", "Crossbody bag", "Map/Guidebook", "Casual outfits"],
+    international: ["Passport", "Visa documents", "Travel insurance", "Currency", "Universal adapter"]
+};
+
+function generateChecklist() {
+    const destination = document.getElementById("destination").value;
+    const checklist = document.getElementById("checklist");
+    checklist.innerHTML = "";
+    document.getElementById("message").innerHTML = "";
+
+    if (destination && items[destination]) {
+        items[destination].forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = `<label><input type="checkbox"> ${item}</label>`;
+            checklist.appendChild(li);
+        });
+    }
+}
+
+function checkCompletion() {
+    const checkboxes = document.querySelectorAll("#checklist input[type='checkbox']");
+    const total = checkboxes.length;
+    const checked = document.querySelectorAll("#checklist input[type='checkbox']:checked").length;
+
+    if (total === 0) {
+        document.getElementById("message").innerHTML = "Please select a destination first.";
+    } else if (checked === total) {
+        document.getElementById("message").innerHTML = "✨ You’re all set! Have a safe solo trip 💖";
+    } else {
+        document.getElementById("message").innerHTML = "You still have items to pack!";
+    }
+}
+</script>
+
+</body>
+</html>

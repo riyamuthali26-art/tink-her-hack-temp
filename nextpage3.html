@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Solo - Personality Quiz</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    color: #ff4f81;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4f81;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff2e6a;
+}
+
+.result {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Solo Travel Personality Quiz 🌍</h2>
+
+<form id="quizForm">
+
+<div class="question">
+<p>1. What excites you most about solo travel?</p>
+<label><input type="radio" name="q1" value="explorer" required> Discovering hidden places</label><br>
+<label><input type="radio" name="q1" value="planner"> Organizing the perfect itinerary</label><br>
+<label><input type="radio" name="q1" value="adventure"> Thrilling activities</label><br>
+<label><input type="radio" name="q1" value="learner"> Learning new cultures</label><br>
+<label><input type="radio" name="q1" value="luxury"> Relaxing in comfort</label>
+</div>
+
+<div class="question">
+<p>2. Your ideal stay?</p>
+<label><input type="radio" name="q2" value="explorer" required> Local guesthouses</label><br>
+<label><input type="radio" name="q2" value="planner"> Pre-booked hotels</label><br>
+<label><input type="radio" name="q2" value="adventure"> Camping or trekking huts</label><br>
+<label><input type="radio" name="q2" value="learner"> Cultural homestays</label><br>
+<label><input type="radio" name="q2" value="luxury"> 5-star resorts</label>
+</div>
+
+<div class="question">
+<p>3. Your travel style?</p>
+<label><input type="radio" name="q3" value="explorer" required> Go with the flow</label><br>
+<label><input type="radio" name="q3" value="planner"> Scheduled and organized</label><br>
+<label><input type="radio" name="q3" value="adventure"> Bold and daring</label><br>
+<label><input type="radio" name="q3" value="learner"> Curious and thoughtful</label><br>
+<label><input type="radio" name="q3" value="luxury"> Comfortable and stylish</label>
+</div>
+
+<div class="question">
+<p>4. Pick an activity:</p>
+<label><input type="radio" name="q4" value="explorer" required> City wandering</label><br>
+<label><input type="radio" name="q4" value="planner"> Museum tours</label><br>
+<label><input type="radio" name="q4" value="adventure"> Skydiving</label><br>
+<label><input type="radio" name="q4" value="learner"> Cooking classes</label><br>
+<label><input type="radio" name="q4" value="luxury"> Spa day</label>
+</div>
+
+<div class="question">
+<p>5. What matters most?</p>
+<label><input type="radio" name="q5" value="explorer" required> Freedom</label><br>
+<label><input type="radio" name="q5" value="planner"> Structure</label><br>
+<label><input type="radio" name="q5" value="adventure"> Excitement</label><br>
+<label><input type="radio" name="q5" value="learner"> Knowledge</label><br>
+<label><input type="radio" name="q5" value="luxury"> Comfort</label>
+</div>
+
+<button type="submit">See My Personality</button>
+
+</form>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<script>
+document.getElementById("quizForm").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const answers = document.querySelectorAll("input[type='radio']:checked");
+    let scores = {
+        explorer: 0,
+        planner: 0,
+        adventure: 0,
+        learner: 0,
+        luxury: 0
+    };
+
+    answers.forEach(answer => {
+        scores[answer.value]++;
+    });
+
+    let personality = Object.keys(scores).reduce((a, b) => 
+        scores[a] > scores[b] ? a : b
+    );
+
+    const resultDiv = document.getElementById("result");
+    document.getElementById("quizForm").style.display = "none";
+
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = "✨ You are a <br><br>" + 
+        personality.charAt(0).toUpperCase() + personality.slice(1) + 
+        " Solo Traveler! 🌸";
+});
+</script>
+
+</body>
+</html>
