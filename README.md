@@ -13,7 +13,7 @@
 - Member 2: [Riya M P] - [Ahalia school of Engineering and Technology]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://tink-her-hack-temp-one.vercel.app/
 
 ### Project Description
 [She Solo is a solo travel platform designed for women.
