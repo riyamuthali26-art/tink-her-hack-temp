@@ -1,4 +1,4 @@
-<p align="center">
+[nextpage2.html](https://github.com/user-attachments/files/25617859/nextpage2.html)<p align="center">
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
@@ -9,20 +9,24 @@
 ### Team Name: [Name]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Nada.A] - [Ahalia school of Engineering and Technology]
+- Member 2: [Riya M P] - [Ahalia school of Engineering and Technology]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[She Solo is a solo travel platform designed for women.
+
+It features real travel stories, a personality-based quiz with destination suggestions, and a practical solo trip checklist.
+
+Our goal is to inspire confidence, safety, and independence through solo travel.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Women often hesitate to travel alone due to fear, safety concerns, and lack of proper guidance. There is no single platform that provides real solo travel experiences, personalized travel suggestions, and practical preparation support in one place]
 
 ### The Solution
-[How are you solving it?]
+[She Solo solves this problem by providing authentic stories, a personalized travel personality quiz, and a structured checklist to help women travel confidently and safely.]
 
 ---
 
@@ -31,25 +35,25 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [HTML5,CSS3,JavaScript(Vanilla JS)]
+- Frameworks used: [None]
+- Libraries used: [None]
+- Tools used: [V S code,google chrome,git,github]
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: [Processor , RAM,Storage ,display,internet]
+- Specifications: [Processor,RAM,Storage,DisplayUnit]
+- Tools required: d[VS code,google chrome,git,github,internet connection]
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Real Stories Sharing Platform]
+- Feature 2: [Solo Personality Quiz]
+- Feature 3: [Solo Trip Checklist]
+- Feature 4: [Client-Side Form Validation]
 
 ---
 
@@ -70,7 +74,7 @@ List the key features of your project:
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+[processor(CPU),RAM,Display,Storage]
 
 #### Circuit Setup
 [Explain how to set up the circuit]
@@ -83,26 +87,17 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1913" height="893" alt="{060F9F50-B607-4433-919F-D705C64A5206}" src="https://github.com/user-attachments/assets/12e6e132-b7bb-4169-8724-e8331e262ae5" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1909" height="889" alt="{54BBD2D4-CF9B-4F4B-87F6-75B0E37BF871}" src="https://github.com/user-attachments/assets/0aeb2ee0-cbe7-419a-b439-cb6e77bf40bd" />
+<img width="1911" height="873" alt="{06C360E8-504D-451A-952D-8F102CE66C11}" src="https://github.com/user-attachments/assets/75fe576c-3bd3-4d84-a723-955d67be6f19" />
+<img width="1903" height="897" alt="{CFED199F-9BAF-4279-952A-31EAC254B226}" src="https://github.com/user-attachments/assets/4d9fe067-bd99-4907-9217-aea3bf2da025" />
 
 #### Diagrams
 
-**System Architecture:**
+Application Workflow:**
+![Workflow](https://github.com/user-attachments/assets/adf886e7-9383-4e5f-b6e4-96272802b23e)
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
-
-**Application Workflow:**
-
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
 
 ---
 
@@ -110,7 +105,42 @@ List the key features of your project:
 
 #### Schematic & Circuit
 
-![Circuit](Add your circuit diagram here)
+![Circuit](A           ┌────────────┐
+           │  Home Page │
+           │ index.html │
+           └─────┬──────┘
+                 │ Click "Get Started"
+                 ▼
+        ┌──────────────────┐
+        │ Real Stories Page │
+        │ realstories.html │
+        └─────┬────────────┘
+          User submits stories
+                 │
+                 ▼
+        ┌──────────────────┐
+        │   JS DOM Storage  │
+        │ (Temporary Data) │
+        └─────┬────────────┘
+                 │
+                 ▼
+        ┌──────────────────┐
+        │ Solo Personality  │
+        │ Quiz Module      │
+        └─────┬────────────┘
+          User selects answers
+                 │
+                 ▼
+        ┌──────────────────┐
+        │  Quiz Result &    │
+        │ Suggested Dest.  │
+        └─────┬────────────┘
+                 │
+                 ▼
+        ┌──────────────────┐
+        │ Solo Trip Checklist│
+        │  Module          │
+        └──────────────────┘)
 *Add caption explaining connections*
 
 ![Schematic](Add your schematic diagram here)
@@ -361,7 +391,7 @@ python script.py -v --format json data.json
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+https://drive.google.com/file/d/1sihRhojAFq6fdDzRjV9CD9oflznT7Wfo/view?usp=sharing
 
 *Explain what the video demonstrates - key features, user flow, technical highlights*
 
@@ -400,8 +430,9 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
+- [Nada.A]: [Developed the Solo Personality Quiz: created interactive questions, implemented JavaScript logic to calculate travel personality, and suggested destinations.
+- Created the Solo Trip Checklist module: designed interactive checklist using HTML and JavaScript DOM manipulation.]
+- [Riya M P]: [Developed the Real Stories module: designed the HTML form, implemented JavaScript logic for story submission, and dynamic display of user experiences.]
 - [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
 
 ---
