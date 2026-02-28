@@ -2,11 +2,12 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# SheSolo 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: TECHBLOOM
+
 
 ### Team Members
 - Member 1: [Nada.A] - [Ahalia school of Engineering and Technology]
